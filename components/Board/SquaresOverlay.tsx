@@ -55,7 +55,7 @@ export function BoardSquaresOverlay() {
         // If the user clicked on another piece, restart move with that square
         else if (chess.get(square)) {
           dispatch(resetMove());
-          dispatch(startMove("square"));
+          dispatch(startMove(square));
         }
       }
     } else if (moveState === "moved") {
@@ -70,7 +70,7 @@ export function BoardSquaresOverlay() {
         dispatch(resetMove());
       }
       // If the square is not occupied by a piece, do nothing
-      if (chess.get(square)) return;
+      if (!chess.get(square)) return;
 
       // If the square is occupied by a piece, start a move
       dispatch(resetMove());

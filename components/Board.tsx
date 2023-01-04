@@ -21,7 +21,7 @@ import {BoardValidMoveOverlay} from "./Board/ValidMoveOverlay";
 export default function Board() {
   return (
     <svg
-      className="m-auto max-h-full max-w-full object-contain"
+      className="m-auto h-full w-full object-contain"
       viewBox="0 0 544 544"
     >
       <foreignObject height="544" width="544">
